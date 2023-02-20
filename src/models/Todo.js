@@ -1,7 +1,7 @@
-const mongoose = require("../mongoosedb");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-const todoSchema = Schema ({
+const todoSchema =  new Schema({
     title: {
         type: String,
         required: true,
@@ -20,8 +20,6 @@ const todoSchema = Schema ({
     }
 });
 
-/*
- todos => definição do nome da coleção (pode ser qualquer nome)
- Todo => objeto que da acesso ao banco de dados mongo na coleção todos
-*/
-module.exports = Todo = mongoose.model("todos", todoSchema) 
+module.exports = Todo = mongoose.model('todos',todoSchema);
+
+
