@@ -1,0 +1,16 @@
+{
+    "name":"todo",
+    "version": "1",
+    "public": true,
+    "build": {
+        "src": "src/app.js",
+        "use": "@vercel/node"
+    },
+    "routes": [
+        {
+            "src":"src/routers.todo.js",
+            "dest":"src/app.js"
+        }
+    ]
+
+}
